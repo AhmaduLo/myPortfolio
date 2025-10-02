@@ -84,25 +84,25 @@ export class TestimonialsComponent {
       text: "Ahmadu a fait preuve d'une grande autonomie et d'un excellent esprit d'équipe lors de son alternance. Sa maîtrise de React et son souci du détail dans les tests ont grandement contribué à la qualité de nos applications. C'est un développeur rigoureux qui s'investit pleinement dans ses projets.",
       name: "Jean Dupont",
       title: "Lead Developer, BNP Paribas",
-      image: "assets/images/testimonial-bnp.jpg"
+      image: "assets/images/temoignage.jpg"
     },
     {
       text: "Développeur rigoureux et investi, Ahmadu a su mener à bien le projet Shambles en respectant les délais et en appliquant les bonnes pratiques de développement. Son évolution technique a été remarquable tout au long de sa formation. Sa capacité d'apprentissage et son professionnalisme sont exemplaires.",
       name: "Marie Martin",
       title: "Formatrice, Simplon",
-      image: "assets/images/testimonial-simplon.jpg"
+      image: "assets/images/temoignage.jpg"
     },
     {
       text: "Professionnel et à l'écoute, Ahmadu a su comprendre nos besoins et créer un site web moderne et fonctionnel pour notre restaurant. Le système de réservation fonctionne parfaitement et nos clients apprécient la facilité d'utilisation. Nous recommandons ses services sans hésitation.",
       name: "Hassan Ali",
       title: "Propriétaire, Restaurant 2HA CONCEPT",
-      image: "assets/images/testimonial-restaurant.jpg"
+      image: "assets/images/temoignage.jpg"
     },
     {
       text: "Ahmadu est un développeur Full Stack complet qui maîtrise aussi bien le frontend que le backend. Sa capacité à comprendre les besoins métier et à les traduire en solutions techniques efficaces est remarquable. Son expertise en Java/Spring Boot et Angular fait de lui un atout précieux pour tout projet.",
       name: "Sophie Leblanc",
       title: "Chef de Projet, OpenClassrooms",
-      image: "assets/images/testimonial-openclassrooms.jpg"
+      image: "assets/images/temoignage.jpg"
     }
   ];
 

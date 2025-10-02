@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -125,15 +127,38 @@ export class ContactComponent {
     message: ''
   };
 
-  onSubmit() {
-    alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+  // Récupération des clés depuis le fichier d'environnement
+  private serviceID = environment.emailjs.serviceID;
+  private templateID = environment.emailjs.templateID;
+  private publicKey = environment.emailjs.publicKey;
 
-    // Réinitialiser le formulaire
-    this.formData = {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+  onSubmit() {
+    // Préparer les paramètres du template
+    const templateParams = {
+      from_name: this.formData.name,
+      from_email: this.formData.email,
+      subject: this.formData.subject,
+      message: this.formData.message,
+      to_name: 'Bamba Gaye'
     };
+
+    // Envoyer l'email via EmailJS
+    emailjs.send(this.serviceID, this.templateID, templateParams, this.publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+
+        // Réinitialiser le formulaire
+        this.formData = {
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        };
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        alert('Erreur lors de l\'envoi du message. Veuillez réessayer ou me contacter directement par email.');
+      });
   }
 }
