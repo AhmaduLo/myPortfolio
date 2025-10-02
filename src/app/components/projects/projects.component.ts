@@ -35,6 +35,12 @@ import { CommonModule } from '@angular/common';
               <span class="project-category">{{ project.category }}</span>
               <h3 class="project-title">{{ project.title }}</h3>
               <p class="project-description">{{ project.description }}</p>
+              <div class="project-technologies" *ngIf="project.technologies">
+                <span class="tech-badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
+              </div>
+              <a *ngIf="project.link" [href]="project.link" target="_blank" rel="noopener noreferrer" class="project-link">
+                Voir le projet →
+              </a>
             </div>
           </div>
         </div>
@@ -44,30 +50,45 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  filters = ['Tous', 'WordPress', 'Site web dynamique', 'Angular'];
+  filters = ['Tous', 'Java/Spring', 'Angular', 'React', 'Full Stack', 'CI/CD'];
   currentFilter = 'Tous';
 
   projects = [
     {
-      title: 'bambagaye-shop',
-      category: 'E-Shop',
-      description: 'Site e-commerce développé avec WordPress, intégrant WooCommerce pour une expérience d\'achat optimale.',
-      image: 'assets/images/project1.jpg',
-      tags: ['WordPress', 'E-Shop']
+      title: 'Projet 9 : Pipeline CI/CD & DevOps',
+      category: 'CI/CD & DevOps',
+      description: 'Mise en place d\'un pipeline complet avec GitHub Actions, conteneurisation Docker, analyse de code SonarCloud et déploiement automatisé.',
+      image: 'assets/images/projet9.png',
+      tags: ['CI/CD', 'Full Stack'],
+      technologies: ['GitHub Actions', 'Docker', 'SonarCloud', 'Java', 'Angular'],
+      link: 'https://github.com/AhmaduLo/projet_9?tab=readme-ov-file'
     },
     {
-      title: 'Business Landing Page Design',
-      category: 'Design',
-      description: 'Page d\'atterrissage moderne pour entreprise avec design responsive et optimisations SEO.',
-      image: 'assets/images/project2.jpg',
-      tags: ['Site web dynamique', 'Design']
+      title: 'Projet 6 : Application Full Stack Java/Angular',
+      category: 'Full Stack',
+      description: 'Application complète avec backend Java/Spring Boot et frontend Angular. Gestion de base de données, sécurité (authentification/autorisation) et API REST complète.',
+      image: 'assets/images/projet6.png',
+      tags: ['Java/Spring', 'Angular', 'Full Stack'],
+      technologies: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'API REST'],
+      link: 'https://github.com/AhmaduLo/projet6D-veloppez-une-application-full-stack-compl-te'
     },
     {
-      title: 'Ecom Web Page Design',
-      category: 'Ecommerce',
-      description: 'Interface e-commerce développée avec Angular, offrant une expérience utilisateur fluide et moderne.',
-      image: 'assets/images/project3.jpg',
-      tags: ['Angular', 'Ecommerce']
+      title: 'Projet 5 : Application avec Tests Automatisés',
+      category: 'Full Stack',
+      description: 'Application Full Stack avec couverture de tests complète : tests unitaires (JUnit), tests E2E (Cypress) et tests frontend (Jest).',
+      image: 'assets/images/projet5.png',
+      tags: ['Java/Spring', 'Angular', 'Full Stack'],
+      technologies: ['JUnit', 'Cypress', 'Jest', 'Java', 'Angular'],
+      link: 'https://github.com/AhmaduLo/projet5Backdev'
+    },
+    {
+      title: 'Projet 3 : Interface Angular',
+      category: 'Frontend',
+      description: 'Développement d\'une interface utilisateur moderne avec Angular, composants réutilisables, routing et state management.',
+      image: 'assets/images/project-angular.jpg',
+      tags: ['Angular'],
+      technologies: ['Angular', 'TypeScript', 'RxJS', 'Angular Material'],
+      link: 'https://github.com/AhmaduLo/projet3FrontEnd'
     }
   ];
 
@@ -75,11 +96,11 @@ export class ProjectsComponent {
 
   filterProjects(filter: string) {
     this.currentFilter = filter;
-    
+
     if (filter === 'Tous') {
       this.filteredProjects = [...this.projects];
     } else {
-      this.filteredProjects = this.projects.filter(project => 
+      this.filteredProjects = this.projects.filter(project =>
         project.tags.includes(filter)
       );
     }

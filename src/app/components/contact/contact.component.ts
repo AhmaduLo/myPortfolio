@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
                 <div class="info-icon">📍</div>
                 <div class="info-text">
                   <strong>Adresse:</strong>
-                  <p>Paris</p>
+                  <p>France / Union Européenne</p>
                 </div>
               </div>
 
@@ -36,16 +36,22 @@ import { FormsModule } from '@angular/forms';
                 <div class="info-icon">📞</div>
                 <div class="info-text">
                   <strong>Contact:</strong>
-                  <p>07 78 22 99 00</p>
+                  <p>+33 07 51 13 09 37</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">💼</div>
+                <div class="info-text">
+                  <strong>Disponibilité:</strong>
+                  <p>Immédiate</p>
                 </div>
               </div>
 
               <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/bamba-gaye-/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:gbamba123@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+33751130937" class="social-icon"><i class="fas fa-phone"></i></a>
               </div>
             </div>
 

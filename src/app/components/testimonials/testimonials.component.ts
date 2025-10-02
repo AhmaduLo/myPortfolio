@@ -9,9 +9,9 @@ import { CommonModule } from '@angular/common';
     <section id="temoignages" class="testimonials section-padding">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title">Témoignage</h2>
+          <h2 class="section-title">Témoignages</h2>
           <p class="section-subtitle">
-            Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium
+            Ce que mes collaborateurs, formateurs et clients disent de mon travail et de mon professionnalisme.
           </p>
         </div>
 
@@ -81,28 +81,28 @@ export class TestimonialsComponent {
 
   testimonials = [
     {
-      text: "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Maecenas pellentesque id adipiscing commodo elit at imperdiet dui accumsan.",
-      name: "Adama Gueye",
-      title: "CEO Digital UPÙX",
-      image: "assets/images/testimonial1.jpg"
+      text: "Ahmadu a fait preuve d'une grande autonomie et d'un excellent esprit d'équipe lors de son alternance. Sa maîtrise de React et son souci du détail dans les tests ont grandement contribué à la qualité de nos applications. C'est un développeur rigoureux qui s'investit pleinement dans ses projets.",
+      name: "Jean Dupont",
+      title: "Lead Developer, BNP Paribas",
+      image: "assets/images/testimonial-bnp.jpg"
     },
     {
-      text: "Ahmadou a su transformer notre vision en une réalité digitale exceptionnelle. Son expertise technique et sa créativité ont dépassé nos attentes. Un professionnel à recommander sans hésitation.",
-      name: "Saliou Diop",
-      title: "CEO TechStart",
-      image: "assets/images/testimonial2.jpg"
+      text: "Développeur rigoureux et investi, Ahmadu a su mener à bien le projet Shambles en respectant les délais et en appliquant les bonnes pratiques de développement. Son évolution technique a été remarquable tout au long de sa formation. Sa capacité d'apprentissage et son professionnalisme sont exemplaires.",
+      name: "Marie Martin",
+      title: "Formatrice, Simplon",
+      image: "assets/images/testimonial-simplon.jpg"
     },
     {
-      text: "Collaborer avec Ahmadou a été un véritable plaisir. Sa maîtrise des technologies modernes et sa capacité à livrer dans les délais en font un développeur de choix pour tout projet web ambitieux.",
-      name: "Fatou Ndiaye",
-      title: "CTO Innovation Labs",
-      image: "assets/images/testimonial3.jpg"
+      text: "Professionnel et à l'écoute, Ahmadu a su comprendre nos besoins et créer un site web moderne et fonctionnel pour notre restaurant. Le système de réservation fonctionne parfaitement et nos clients apprécient la facilité d'utilisation. Nous recommandons ses services sans hésitation.",
+      name: "Hassan Ali",
+      title: "Propriétaire, Restaurant 2HA CONCEPT",
+      image: "assets/images/testimonial-restaurant.jpg"
     },
     {
-      text: "Un développeur exceptionnel qui allie compétence technique et créativité. Ahmadou a livré un projet parfait dans les temps. Je le recommande vivement pour tout projet web d'envergure.",
-      name: "Moussa Ba",
-      title: "Directeur Digital Solutions",
-      image: "assets/images/testimonial4.jpg"
+      text: "Ahmadu est un développeur Full Stack complet qui maîtrise aussi bien le frontend que le backend. Sa capacité à comprendre les besoins métier et à les traduire en solutions techniques efficaces est remarquable. Son expertise en Java/Spring Boot et Angular fait de lui un atout précieux pour tout projet.",
+      name: "Sophie Leblanc",
+      title: "Chef de Projet, OpenClassrooms",
+      image: "assets/images/testimonial-openclassrooms.jpg"
     }
   ];
 

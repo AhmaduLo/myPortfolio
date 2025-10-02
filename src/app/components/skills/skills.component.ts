@@ -31,24 +31,49 @@ import { CommonModule } from '@angular/common';
 export class SkillsComponent {
   skillsData = [
     {
-      icon: '📄',
-      name: 'HTML & CSS',
-      description: 'Maîtrise avancée des langages de balisage et de style, création d\'interfaces modernes et responsives avec les dernières normes web.'
+      icon: '☕',
+      name: 'Java & Spring Boot',
+      description: 'Développement d\'applications backend robustes et sécurisées, création d\'API REST, architecture MVC et gestion de bases de données.'
+    },
+    {
+      icon: '🅰️',
+      name: 'Angular & React',
+      description: 'Création d\'interfaces utilisateur modernes et réactives, maîtrise des composants, routing, state management et optimisation des performances.'
     },
     {
       icon: '⚡',
-      name: 'JavaScript',
-      description: 'Développement d\'applications interactives et dynamiques, expertise en ES6+ et programmation orientée objet moderne.'
+      name: 'JavaScript/TypeScript',
+      description: 'Développement d\'applications interactives et dynamiques, expertise en ES6+ et programmation orientée objet moderne avec TypeScript.'
     },
     {
-      icon: '⚙️',
-      name: 'WordPress',
-      description: 'Création de sites web sur mesure, développement de thèmes personnalisés et optimisation pour les performances et le SEO.'
+      icon: '📄',
+      name: 'HTML5 & CSS3',
+      description: 'Maîtrise avancée des langages de balisage et de style, création d\'interfaces modernes et responsives avec Bootstrap et les dernières normes web.'
+    },
+    {
+      icon: '🔧',
+      name: 'CI/CD & DevOps',
+      description: 'Mise en place de pipelines Jenkins et GitHub Actions, conteneurisation Docker, analyse de code avec SonarCloud et déploiement automatisé.'
+    },
+    {
+      icon: '✅',
+      name: 'Tests & Qualité',
+      description: 'Tests unitaires avec JUnit, tests E2E avec Cypress, tests frontend avec Jest, assurance qualité et couverture de code.'
+    },
+    {
+      icon: '🗄️',
+      name: 'Bases de données',
+      description: 'Conception et gestion de bases de données relationnelles MySQL et PostgreSQL, optimisation des requêtes et modélisation de données.'
     },
     {
       icon: '🔄',
-      name: 'Scrum',
-      description: 'Application des méthodes agiles pour la gestion de projets, collaboration efficace en équipe et livraison continue de valeur.'
+      name: 'Méthodes Agile',
+      description: 'Application des méthodologies Scrum et Kanban, utilisation de Jira et Trello, collaboration efficace en équipe et livraison continue.'
+    },
+    {
+      icon: '🎨',
+      name: 'Design & Outils',
+      description: 'Création de maquettes avec Figma, collaboration avec Slack et Bitbucket, versioning Git et workflow de développement collaboratif.'
     }
   ];
 }
