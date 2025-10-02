@@ -1,0 +1,206 @@
+// Variables SCSS
+$primary-black: #1a1a1a;
+$deep-black: #0d0d0d;
+$orange: #ff6b35;
+$orange-hover: #e55a2b;
+$white: #ffffff;
+$text-gray: #666;
+$light-gray: #b0b0b0;
+$light-bg: #f8f8f8;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease) {
+  transition: $property $duration $ease;
+}
+
+@mixin button-base {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  @include transition();
+}
+
+@mixin card-hover {
+  @include transition(transform);
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Reset et base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include transition();
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+  
+  &-track {
+    background: #f1f1f1;
+  }
+  
+  &-thumb {
+    background: $orange;
+    border-radius: 10px;
+    
+    &:hover {
+      background: $orange-hover;
+    }
+  }
+}
+
+// Classes utilitaires
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.orange-text {
+  color: $orange;
+}
+
+.white-text {
+  color: $white;
+}
+
+.gray-text {
+  color: $text-gray;
+}
+
+// Grilles
+.grid {
+  display: grid;
+  gap: 2rem;
+  
+  &-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  &-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  &-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+// Boutons
+.btn {
+  @include button-base;
+  
+  &-primary {
+    background-color: $orange;
+    color: $white;
+    
+    &:hover {
+      background-color: $orange-hover;
+      transform: translateY(-2px);
+    }
+  }
+  
+  &-outline {
+    background-color: transparent;
+    color: $orange;
+    border: 2px solid $orange;
+    
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+}
+
+// Cards
+.card {
+  background: $white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @include card-hover;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Formulaires
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  margin-bottom: 1rem;
+  @include transition(border-color);
+  
+  &:focus {
+    outline: none;
+    border-color: $orange;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
