@@ -28,6 +28,9 @@ import { SafePipe } from '../../pipes/safe.pipe';
             <p class="education-level">{{ edu.level }}</p>
             <div class="education-period">{{ edu.period }}</div>
             <p class="education-description">{{ edu.description }}</p>
+            <ul class="education-highlights" *ngIf="edu.highlights">
+              <li *ngFor="let highlight of edu.highlights">{{ highlight }}</li>
+            </ul>
             <div class="education-technologies" *ngIf="edu.technologies && edu.technologies.length > 0">
               <span class="tech-badge" *ngFor="let tech of edu.technologies">{{ tech }}</span>
             </div>
@@ -56,40 +59,63 @@ export class EducationComponent {
   educations = [
     {
       icon: '🎓',
-      period: '2025-2026',
+      period: '2025 - 2026 (En cours)',
       title: 'Master Développeur Full Stack Java/Angular',
       institution: 'OpenClassrooms',
       level: 'Niveau 7 (Bac+5)',
       status: 'En cours',
       statusIcon: '🎓',
       statusColor: 'orange',
-      description: 'Formation approfondie en développement Full Stack avec spécialisation Java/Spring Boot et Angular. Projets incluant CI/CD, tests automatisés, architecture microservices et gestion de projet Agile.',
-      technologies: ['Java', 'Spring Boot', 'Angular', 'Docker', 'Jenkins', 'CI/CD', 'JUnit', 'Jest', 'Cypress'],
+      description: 'Formation avancée en développement Full Stack avec spécialisation Java/Spring Boot et Angular, incluant CI/CD et méthodologies Agile.',
+      highlights: [
+        'Architecture d\'applications Full Stack complexes',
+        'Maîtrise approfondie de Java/Spring Boot et Angular',
+        'DevOps : CI/CD avec Jenkins et GitHub Actions',
+        'Tests automatisés et qualité de code',
+        'Gestion de projets en méthodologie Agile',
+        'Sécurité des applications web'
+      ],
+      technologies: ['Java', 'Spring Boot', 'Angular', 'Docker', 'Jenkins', 'SonarCloud', 'MySQL', 'PostgreSQL'],
       diplomaUrl: 'assets/diplomas/master-fullstack.pdf'
     },
     {
       icon: '💻',
-      period: '2022-2024',
-      title: 'Développeur d\'Application - JavaScript React',
+      period: '2022 - 2024',
+      title: 'Développeur d\'Application JavaScript React',
       institution: 'OpenClassrooms',
       level: 'Niveau 6 (Bac+3/4)',
       status: 'Obtenu',
       statusIcon: '✅',
       statusColor: 'green',
-      description: 'Formation spécialisée en développement frontend avec React.js. Maîtrise des composants, hooks, routing, state management et tests automatisés.',
+      description: 'Formation intensive au développement d\'applications avec JavaScript et React, avec mise en pratique lors de l\'alternance chez BNP Paribas.',
+      highlights: [
+        'Développement d\'applications React modernes',
+        'Tests unitaires et E2E',
+        'State management avancé',
+        'API REST et intégration backend',
+        'Alternance de 2 ans chez BNP Paribas'
+      ],
       technologies: ['JavaScript', 'React', 'Redux', 'Node.js', 'Express', 'MongoDB', 'Jest', 'Cypress'],
       diplomaUrl: 'assets/diplomas/niveau6.pdf'
     },
     {
       icon: '🌐',
-      period: '2021-2022',
+      period: '2021 - 2022',
       title: 'Développeur Web et Web Mobile',
       institution: 'Simplon',
-      level: 'Titre Professionnel Niveau 5 (Bac+2)',
+      level: 'Titre Professionnel Niveau 5 (Bac+2) - Obtenu',
       status: 'Obtenu',
       statusIcon: '✅',
       statusColor: 'green',
-      description: 'Formation intensive au développement web Full Stack avec Java/Angular, incluant un projet fil rouge complet de type réseau social.',
+      description: 'Formation intensive au développement web Full Stack avec Java/Angular, incluant un projet fil rouge complet.',
+      highlights: [
+        'Développement de l\'application Shambles (type Instagram)',
+        'Maîtrise de Java et Angular',
+        'Spring Boot pour la création d\'API REST',
+        'Base de données relationnelles',
+        'Méthodologies Agile',
+        'Obtention du Titre Professionnel'
+      ],
       technologies: ['Java', 'Angular', 'Spring Boot', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Git'],
       diplomaUrl: 'assets/diplomas/certificat_dev.pdf'
     }

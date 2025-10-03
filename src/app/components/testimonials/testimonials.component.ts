@@ -87,22 +87,16 @@ export class TestimonialsComponent {
       image: "assets/images/BNP_Paribas.png"
     },
     {
-      text: "Développeur rigoureux et investi, Ahmadu a su mener à bien le projet Shambles en respectant les délais et en appliquant les bonnes pratiques de développement. Son évolution technique a été remarquable tout au long de sa formation. Sa capacité d'apprentissage et son professionnalisme sont exemplaires.",
-      name: "Marie Martin",
-      title: "Formatrice, Simplon",
-      image: "assets/images/temoignage.jpg"
-    },
-    {
-      text: "Professionnel et à l'écoute, Ahmadu a su comprendre nos besoins et créer un site web moderne et fonctionnel pour notre restaurant. Le système de réservation fonctionne parfaitement et nos clients apprécient la facilité d'utilisation. Nous recommandons ses services sans hésitation.",
+      text: "Ahmadou a réalisé le site vitrine de notre restaurant avec professionnalisme. Il a su comprendre nos besoins et proposer une interface moderne et fonctionnelle. Nous avons apprécié son écoute et sa capacité à livrer un travail de qualité dans les délais impartis.",
       name: "Hassan Ali",
-      title: "Propriétaire, Restaurant 2HA CONCEPT",
-      image: "assets/images/temoignage.jpg"
+      title: "Gérant, Restaurant 2HA CONCEPT",
+      image: "assets/images/resto2h.png"
     },
     {
-      text: "Ahmadu est un développeur Full Stack complet qui maîtrise aussi bien le frontend que le backend. Sa capacité à comprendre les besoins métier et à les traduire en solutions techniques efficaces est remarquable. Son expertise en Java/Spring Boot et Angular fait de lui un atout précieux pour tout projet.",
-      name: "Sophie Leblanc",
-      title: "Chef de Projet, OpenClassrooms",
-      image: "assets/images/temoignage.jpg"
+      text: "Ahmadou a montré une réelle progression durant sa formation chez Simplon. Son projet Shambles démontre sa capacité à développer une application complète en respectant les bonnes pratiques. Il a su travailler en équipe et s'adapter aux méthodes Agile.",
+      name: "Jeremy Sostra",
+      title: "Formateur, Simplon",
+      image: "assets/images/simplon.png"
     }
   ];
 

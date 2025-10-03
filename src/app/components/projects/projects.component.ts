@@ -89,6 +89,53 @@ export class ProjectsComponent {
       tags: ['Angular'],
       technologies: ['Angular', 'TypeScript', 'RxJS', 'Angular Material'],
       link: 'https://github.com/AhmaduLo/projet3FrontEnd'
+    },
+    {
+      title: 'Site Vitrine E-commerce',
+      category: 'Site Vitrine E-commerce',
+      type: "Projet personnel",
+      description: 'Site vitrine e-commerce développé en Angular pour présenter une boutique en ligne moderne. Interface responsive avec présentation de produits, navigation fluide et design épuré."',
+      image: 'assets/images/sitrVitrine.png',
+      tags: ['Angular'],
+      technologies: ["Angular",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "RxJS",
+        "Angular Router",
+        "Netlify"],
+      link: 'https://bambagaye-shop.netlify.app/'
+    },
+    {
+      title: 'Eyes Following Cursor',
+      category: 'Animation Interactive',
+      type: "Projet personnel",
+      description: 'Animation interactive en JavaScript pur où des yeux suivent le mouvement du curseur en temps réel. Démonstration de manipulation du DOM, calcul de coordonnées et animations fluides."',
+      image: 'assets/images/eyes.png',
+      tags: ['Angular'],
+      technologies: ["JavaScript Vanilla",
+        "HTML5",
+        "CSS3",
+        "DOM API",
+        "Event Listeners"],
+      link: 'https://musing-engelbart-0965b4.netlify.app/'
+    },
+    {
+      title: 'Under Armour Clone',
+      category: 'Intégration Web',
+      type: "Projet personnel",
+      description: "Reproduction fidèle de la page d'accueil Under Armour pour perfectionner mes compétences en HTML/CSS. Focus sur le responsive design, les layouts complexes et les animations CSS avancées.",
+      image: 'assets/images/underArmour.png',
+      tags: ['Angular'],
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "Flexbox",
+        "CSS Grid",
+        "Responsive Design",
+        "CSS Animations"
+      ],
+      link: 'https://determined-wescoff-a1ad3d.netlify.app/'
     }
   ];
 
