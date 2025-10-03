@@ -45,7 +45,7 @@ export class EducationComponent {
       period: '2025 - 2026 (En cours)',
       title: 'Master Développeur Full Stack Java/Angular',
       institution: 'OpenClassrooms',
-      level: 'Niveau 6 (Bac+3/4)',
+      level: 'Niveau 7 (Bac+5)',
       description: 'Formation avancée en développement Full Stack avec spécialisation Java/Spring Boot et Angular, incluant CI/CD et méthodologies Agile.',
       highlights: [
         'Architecture d\'applications Full Stack complexes',

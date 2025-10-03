@@ -81,10 +81,10 @@ export class TestimonialsComponent {
 
   testimonials = [
     {
-      text: "Ahmadu a fait preuve d'une grande autonomie et d'un excellent esprit d'équipe lors de son alternance. Sa maîtrise de React et son souci du détail dans les tests ont grandement contribué à la qualité de nos applications. C'est un développeur rigoureux qui s'investit pleinement dans ses projets.",
-      name: "Jean Dupont",
+      text: "Ahmadu a été un excellent apprenti. Il a fait preuve d'une grande autonomie, d'une implication remarquable et a rapidement maîtrisé JavaScript et React. Son travail rigoureux et sa capacité d'adaptation ont été des atouts précieux pour l'équipe.",
+      name: "BRAULT Sylvain",
       title: "Lead Developer, BNP Paribas",
-      image: "assets/images/temoignage.jpg"
+      image: "assets/images/BNP_Paribas.png"
     },
     {
       text: "Développeur rigoureux et investi, Ahmadu a su mener à bien le projet Shambles en respectant les délais et en appliquant les bonnes pratiques de développement. Son évolution technique a été remarquable tout au long de sa formation. Sa capacité d'apprentissage et son professionnalisme sont exemplaires.",
