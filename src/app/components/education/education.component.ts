@@ -118,6 +118,27 @@ export class EducationComponent {
       ],
       technologies: ['Java', 'Angular', 'Spring Boot', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Git'],
       diplomaUrl: 'assets/diplomas/certificat_dev.pdf'
+    },
+    {
+      icon: '📋',
+      period: 'Délivré le 12/04/2022',
+      title: 'Certificat de Compétences - Gérer un Projet en Mobilisant les Méthodes Agiles',
+      institution: 'Simplon.co',
+      level: 'Certificat de Compétences - Validité Permanente',
+      status: 'Obtenu',
+      statusIcon: '✅',
+      statusColor: 'green',
+      description: 'Certification professionnelle en gestion de projet Agile, validant les compétences en méthodologies Scrum, Kanban et gestion d\'équipe.',
+      highlights: [
+        'Maîtrise des méthodes Agile (Scrum, Kanban)',
+        'Planification et suivi de sprints',
+        'Animation de cérémonies Agile',
+        'Gestion de backlog produit',
+        'Collaboration en équipe',
+        'Certification à validité permanente'
+      ],
+      technologies: ['Scrum', 'Kanban', 'Jira', 'Trello', 'Agile'],
+      diplomaUrl: 'assets/diplomas/agile.pdf'
     }
   ];
 

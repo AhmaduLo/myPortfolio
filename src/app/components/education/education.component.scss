@@ -4,17 +4,30 @@
 }
 
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 50px;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr);
+  /* Custom scrollbar */
+  &::-webkit-scrollbar {
+    height: 8px;
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+  &::-webkit-scrollbar-track {
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 10px;
+    margin: 0 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+
+    &:hover {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
   }
 }
 
@@ -26,6 +39,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 2px solid;
+  min-width: 350px;
 
   &[data-status="orange"] {
     border-color: #ff9800;
@@ -293,8 +307,13 @@
     padding: 60px 0;
   }
 
+  .education-grid {
+    gap: 1.5rem;
+  }
+
   .education-card {
     padding: 1.5rem;
+    min-width: 320px;
   }
 
   .education-icon-header {
@@ -331,6 +350,7 @@
 @media (max-width: 576px) {
   .education-card {
     padding: 1.25rem;
+    min-width: 280px;
   }
 
   .education-icon-header {
