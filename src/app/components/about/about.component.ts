@@ -12,25 +12,38 @@ import { CommonModule } from '@angular/common';
         <div class="about-content">
           <div class="about-image">
             <div class="profile-image">
-              <img src="assets/images/profile2.jpg" alt="AHMADU BAMBA GAYE LO" />
+              <img
+                src="assets/images/profile2.jpg"
+                alt="AHMADU BAMBA GAYE LO"
+              />
             </div>
           </div>
           <div class="about-text">
             <h2 class="section-title">À propos de moi</h2>
             <p class="about-description">
-              Développeur Full Stack Java/Angular passionné par la création d'applications performantes,
-              sécurisées et intuitives. Fort d'expériences en entreprise (BNP Paribas) et d'une formation
-              approfondie chez OpenClassrooms, je maîtrise le développement frontend et backend,
-              l'intégration continue et la gestion de projets en méthodologie Agile.
+              Développeur Full Stack Java / Angular, je conçois et maintiens des
+              applications web robustes en combinant rigueur technique et sens
+              du détail. Mon parcours m’a permis d’acquérir une solide
+              expérience chez BNP Paribas, où j’ai participé au développement et
+              à la maintenance d’applications internes, tout en suivant une
+              formation approfondie chez OpenClassrooms. Je maîtrise l’ensemble
+              de la stack frontend (Angular) et backend (Java / Spring Boot),
+              ainsi que les outils d’intégration continue comme Jenkins et
+              Docker. Curieux et impliqué, je recherche constamment à améliorer
+              la qualité du code, l’automatisation des tests et la collaboration
+              en équipe dans un environnement Agile.
             </p>
-          
+
             <div class="additional-info">
-              <p><strong>🌍 Langues:</strong> Wolof (Maternel), Français (Maternel), Anglais (B1)</p>
+              <p>
+                <strong>🌍 Langues:</strong> Wolof (Maternel), Français
+                (Maternel), Anglais (B1)
+              </p>
               <p><strong>📷Nationalité:</strong> Espagnol</p>
               <p><strong>📍 Localisation:</strong> France / Union Européenne</p>
               <p><strong>✅ Disponibilité:</strong> Immédiate</p>
             </div>
-            <br>
+            <br />
             <div class="skills-progress">
               <div class="skill" *ngFor="let skill of skills">
                 <div class="skill-header">
@@ -38,7 +51,10 @@ import { CommonModule } from '@angular/common';
                   <span class="skill-percentage">{{ skill.level }}%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="progress-fill" [style.width.%]="skill.level"></div>
+                  <div
+                    class="progress-fill"
+                    [style.width.%]="skill.level"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -47,7 +63,6 @@ import { CommonModule } from '@angular/common';
       </div>
     </section>
   `,
-
 })
 export class AboutComponent {
   skills = [
@@ -56,6 +71,6 @@ export class AboutComponent {
     { name: 'CI/CD (Jenkins, Docker)', level: 80 },
     { name: 'Tests (JUnit, Cypress, Jest)', level: 80 },
     { name: 'MySQL/PostgreSQL', level: 85 },
-    { name: 'Agile/Scrum', level: 85 }
+    { name: 'Agile/Scrum', level: 85 },
   ];
 }

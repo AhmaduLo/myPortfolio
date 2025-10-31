@@ -10,4 +10,22 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
 
+  menuOpen = false;
+  scrolled = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    document.body.classList.toggle('no-scroll', this.menuOpen);
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+    document.body.classList.remove('no-scroll');
+  }
+
+  ngOnInit() {
+    window.addEventListener('scroll', () => {
+      this.scrolled = window.scrollY > 8;
+    });
+  }
 }

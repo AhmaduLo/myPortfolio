@@ -1,20 +1,33 @@
-<header class="header">
+<header class="header" [class.scrolled]="scrolled">
   <div class="container">
     <nav class="navbar">
       <div class="logo">
-        <span class="logo-text"> <img src="assets/images/portfolio_logo.svg" alt="Ahmadou Bamba Gaye" /></span>
+        <span class="logo-text">
+          <img src="assets/images/portfolio_logo.svg" alt="Ahmadou Bamba Gaye" />
+        </span>
       </div>
-      <ul class="nav-menu">
-        <li><a href="#accueil" class="nav-link">Accueil</a></li>
-        <li><a href="#apropos" class="nav-link">À propos</a></li>
-        <li><a href="#competences" class="nav-link">Compétences</a></li>
-        <li><a href="#experiences" class="nav-link">Expériences</a></li>
-        <li><a href="#formations" class="nav-link">Formations</a></li>
-        <li><a href="#projets" class="nav-link">Projets</a></li>
-        <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <a href="assets/cv.pdf" download class="btn btn-primary">Télécharger CV</a>
+
+      <!-- Burger menu button -->
+      <button class="burger-menu" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+
+      <!-- Navigation menu -->
+      <div class="nav-wrapper" [class.active]="menuOpen">
+        <ul class="nav-menu">
+          <li><a href="#accueil" class="nav-link" (click)="closeMenu()">Accueil</a></li>
+          <li><a href="#apropos" class="nav-link" (click)="closeMenu()">À propos</a></li>
+          <li><a href="#competences" class="nav-link" (click)="closeMenu()">Compétences</a></li>
+          <li><a href="#experiences" class="nav-link" (click)="closeMenu()">Expériences</a></li>
+          <li><a href="#formations" class="nav-link" (click)="closeMenu()">Formations</a></li>
+          <li><a href="#projets" class="nav-link" (click)="closeMenu()">Projets</a></li>
+          <li><a href="#temoignages" class="nav-link" (click)="closeMenu()">Témoignages</a></li>
+          <li><a href="#contact" class="nav-link" (click)="closeMenu()">Contact</a></li>
+        </ul>
+        <a href="assets/images/BambaGayeCV.pdf" download class="btn btn-primary" (click)="closeMenu()">Télécharger CV</a>
+      </div>
     </nav>
   </div>
 </header>
