@@ -142,23 +142,60 @@
   }
 }
 
-// Responsive - Tablet
-@media (max-width: 992px) {
+// Responsive - Large Tablet (1048px - 993px)
+@media (max-width: 1048px) {
   .nav-menu {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .nav-wrapper {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    &-text img {
+      height: 35px;
+    }
+  }
+}
+
+// Responsive - Tablet (992px - 769px)
+@media (max-width: 992px) {
+  .nav-menu {
+    gap: 0.8rem;
+  }
+
+  .nav-wrapper {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    &-text img {
+      height: 32px;
+    }
   }
 }
 
 // Responsive - Mobile
-@media (max-width: 768px) {
+@media (max-width: 853px) {
   .burger-menu {
     display: flex;
   }
