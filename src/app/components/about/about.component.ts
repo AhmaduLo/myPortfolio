@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
         <div class="about-content">
           <div class="about-image">
             <div class="profile-image">
-              <img src="assets/images/profile.jpg" alt="AHMADU BAMBA GAYE LO" />
+              <img src="assets/images/profile2.jpg" alt="AHMADU BAMBA GAYE LO" />
             </div>
           </div>
           <div class="about-text">

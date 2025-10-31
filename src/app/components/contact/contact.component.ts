@@ -34,13 +34,6 @@ import { environment } from '../../../environments/environment';
                 </div>
               </div>
 
-              <div class="info-item">
-                <div class="info-icon">📞</div>
-                <div class="info-text">
-                  <strong>Contact:</strong>
-                  <p>+33 07 51 13 09 37</p>
-                </div>
-              </div>
 
               <div class="info-item">
                 <div class="info-icon">💼</div>
@@ -52,8 +45,7 @@ import { environment } from '../../../environments/environment';
 
               <div class="social-links">
                 <a href="https://www.linkedin.com/in/bamba-gaye-/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:gbamba123@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+33751130937" class="social-icon"><i class="fas fa-phone"></i></a>
+                <a href="https://github.com/AhmaduLo" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-github"></i></a>
               </div>
             </div>
 
