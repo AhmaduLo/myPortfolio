@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
-  selector: 'app-footer',
+  selector: "app-footer",
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -14,10 +14,20 @@ import { CommonModule } from '@angular/common';
               <span class="logo-text">ABG DEVELOPPEUR</span>
             </div>
             <div class="footer-social">
-              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a
+                href="https://www.linkedin.com/in/bamba-gaye-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/AhmaduLo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
 
@@ -30,8 +40,6 @@ import { CommonModule } from '@angular/common';
       </div>
     </footer>
   `,
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ["./footer.component.scss"],
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}
