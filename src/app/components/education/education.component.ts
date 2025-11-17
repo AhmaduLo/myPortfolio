@@ -42,13 +42,22 @@ import { SafePipe } from '../../pipes/safe.pipe';
       </div>
     </section>
 
-    <!-- Modal pour afficher le PDF -->
+    <!-- Modal pour afficher le diplôme (PDF ou Image) -->
     <div class="diploma-modal" *ngIf="selectedDiploma" (click)="closeDiplomaModal()">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <button class="modal-close" (click)="closeDiplomaModal()">✕</button>
         <h3 class="modal-title">{{ selectedDiploma.title }}</h3>
-        <div class="pdf-container">
-          <iframe [src]="selectedDiploma.diplomaUrl | safe" type="application/pdf"></iframe>
+        <div class="diploma-container">
+          <!-- Afficher une image si le type est 'image' -->
+          <img *ngIf="selectedDiploma.diplomaType === 'image'"
+               [src]="selectedDiploma.diplomaUrl"
+               [alt]="selectedDiploma.title"
+               class="diploma-image">
+          <!-- Afficher un PDF si le type est 'pdf' -->
+          <iframe *ngIf="selectedDiploma.diplomaType === 'pdf'"
+                  [src]="selectedDiploma.diplomaUrl | safe"
+                  type="application/pdf"
+                  class="diploma-pdf"></iframe>
         </div>
       </div>
     </div>
@@ -59,13 +68,13 @@ export class EducationComponent {
   educations = [
     {
       icon: '🎓',
-      period: '2025 - 2026 (En cours)',
+      period: '2025 - 2026',
       title: 'Master Développeur Full Stack Java/Angular',
       institution: 'OpenClassrooms',
       level: 'Niveau 7 (Bac+5)',
-      status: 'En cours',
-      statusIcon: '🎓',
-      statusColor: 'orange',
+      status: 'Obtenu',
+      statusIcon: '✅',
+      statusColor: 'green',
       description: 'Formation avancée en développement Full Stack avec spécialisation Java/Spring Boot et Angular, incluant CI/CD et méthodologies Agile.',
       highlights: [
         'Architecture d\'applications Full Stack complexes',
@@ -76,7 +85,8 @@ export class EducationComponent {
         'Sécurité des applications web'
       ],
       technologies: ['Java', 'Spring Boot', 'Angular', 'Docker', 'Jenkins', 'SonarCloud', 'MySQL', 'PostgreSQL'],
-      diplomaUrl: 'assets/diplomas/master-fullstack.pdf'
+      diplomaUrl: 'assets/diplomas/niveau7.png',
+      diplomaType: 'image'
     },
     {
       icon: '💻',
@@ -96,7 +106,8 @@ export class EducationComponent {
         'Alternance de 2 ans chez BNP Paribas'
       ],
       technologies: ['JavaScript', 'React', 'Redux', 'Node.js', 'Express', 'MongoDB', 'Jest', 'Cypress'],
-      diplomaUrl: 'assets/diplomas/niveau6.pdf'
+      diplomaUrl: 'assets/diplomas/niveau6.png',
+      diplomaType: 'image'
     },
     {
       icon: '🌐',
@@ -117,7 +128,8 @@ export class EducationComponent {
         'Obtention du Titre Professionnel'
       ],
       technologies: ['Java', 'Angular', 'Spring Boot', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Git'],
-      diplomaUrl: 'assets/diplomas/certificat_dev.pdf'
+      diplomaUrl: 'assets/diplomas/certificat_dev.png',
+      diplomaType: 'image'
     },
     {
       icon: '📋',
@@ -138,7 +150,8 @@ export class EducationComponent {
         'Certification à validité permanente'
       ],
       technologies: ['Scrum', 'Kanban', 'Jira', 'Trello', 'Agile'],
-      diplomaUrl: 'assets/diplomas/agile.pdf'
+      diplomaUrl: 'assets/diplomas/agile.png',
+      diplomaType: 'image'
     }
   ];
 
